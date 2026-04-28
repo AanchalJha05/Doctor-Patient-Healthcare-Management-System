@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="{% static 'hospital/css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Doctor Dashboard</h2>
+    <h3>Welcome, Dr. {{ request.user.username }}</h3>
+
+    <h3>Patient Appointments</h3>
+
+    <table>
+        <tr>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+        {% for a in appointments %}
+        <tr>
+            <td>{{ a.patient_name }}</td>
+            <td>{{ a.patient_age }}</td>
+            <td>{{ a.patient_gender }}</td>
+            <td>{{ a.patient_phone }}</td>
+            <td>{{ a.date }}</td>
+            <td>{{ a.time }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No appointments yet</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+
+</body>
+</html>
+<script src="{% static 'js/main.js' %}"></script>

@@ -1,0 +1,64 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="{% static 'hospital/css/style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Welcome, {{ request.user.username }}</h2>
+
+    <h3>Your Appointments</h3>
+
+    <table>
+        <tr>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+        {% for a in appointments %}
+        <tr>
+            <td>{{ a.doctor }}</td>
+            <td>{{ a.date }}</td>
+            <td>{{ a.time }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No appointments yet</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Book Appointment</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="patient_name" placeholder="Name" required><br><br>
+        <input type="number" name="patient_age" placeholder="Age" required><br><br>
+        <input type="text" name="patient_gender" placeholder="Gender" required><br><br>
+        <input type="text" name="patient_phone" placeholder="Phone" required><br><br>
+        <select name="doctor_id" required>
+        <option value="">Select Doctor</option>
+        {% for doc in doctors %}
+            <option value="{{ doc.id }}">{{ doc.user.username }}</option>
+        {% endfor %}
+    </select><br><br>
+
+        <input type="date" name="date" required><br><br>
+        <input type="time" name="time" required><br><br>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+
+</div>
+
+</body>
+</html>
+
+<script src="{% static 'js/main.js' %}"></script>
