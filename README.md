@@ -1,4 +1,4 @@
-\ 🏥 Doctor-Patient Healthcare Management System
+ 🏥 Doctor-Patient Healthcare Management System
 
 
 
@@ -6,41 +6,41 @@ A Django-based web application to manage doctors, patients, and appointments eff
 
 
 
-\---
 
 
 
-\ 🚀 Features
 
-\- Doctor and Patient registration
+ 🚀 Features
 
-\- Appointment booking system
+- Doctor and Patient registration
 
-\- Status tracking (Pending, Confirmed, Cancelled)
+- Appointment booking system
 
-\- Admin panel for management
+- Status tracking (Pending, Confirmed, Cancelled)
 
-
-
-\---
+- Admin panel for management
 
 
 
-\🛠️ Tech Stack
-
-\- Python (Django)
-
-\- SQLite
-
-\- HTML/CSS
 
 
 
-\---
+
+🛠️ Tech Stack
+
+- Python (Django)
+
+- SQLite
+
+- HTML/CSS
 
 
 
-\ ⚙️ Setup
+
+
+
+
+ ⚙️ Setup
 
 ```bash
 
