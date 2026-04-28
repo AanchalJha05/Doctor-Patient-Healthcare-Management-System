@@ -1,4 +1,4 @@
-\# 🏥 Doctor-Patient Healthcare Management System
+\ 🏥 Doctor-Patient Healthcare Management System
 
 
 
@@ -10,7 +10,7 @@ A Django-based web application to manage doctors, patients, and appointments eff
 
 
 
-\## 🚀 Features
+\ 🚀 Features
 
 \- Doctor and Patient registration
 
@@ -26,7 +26,7 @@ A Django-based web application to manage doctors, patients, and appointments eff
 
 
 
-\## 🛠️ Tech Stack
+\🛠️ Tech Stack
 
 \- Python (Django)
 
@@ -40,7 +40,7 @@ A Django-based web application to manage doctors, patients, and appointments eff
 
 
 
-\## ⚙️ Setup
+\ ⚙️ Setup
 
 ```bash
 
